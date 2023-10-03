@@ -16,8 +16,8 @@ module tt_um_njzhu_calculator (
     assign a = ui_in[3:0];
     assign b = ui_in[7:4];
     assign op = uio_in[1:0];
-    assign uio_oe[1:0] = ~8'd3;
-    assign uo_out[3:0] = outReg;
+    assign uio_oe = ~8'd3;
+    assign uo_out = outReg;
     always_comb begin
         case (op)
           2'b00: inReg =  a + b;
