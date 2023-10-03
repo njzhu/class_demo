@@ -19,6 +19,8 @@ module tt_um_njzhu_calculator (
     logic [1:0] op;
     logic [3:0] a, b;
     always_comb begin : 
+        a = 4'd0;
+        b = 4'd0;
         case (op)
           2'b00: inReg =  a + b;
           2'b01: inReg = a - b;
