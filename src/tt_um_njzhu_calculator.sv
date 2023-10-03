@@ -10,14 +10,14 @@ module tt_um_njzhu_calculator (
     input  logic       clk,      // clock
     input  logic       rst_n     // reset_n - low to reset
 );
-    assign ui_in[3:0] = a;
+    logic [3:0] inReg, outReg;
+    logic [1:0] op;
+    logic [3:0] a, b;
+    assign a = ui_in[3:0];
     assign ui_in[7:4] = b;
     assign uio_in[1:0] = op;
     assign uio_oe[1:0] = ~8'd3;
     assign uo_out[3:0] = outReg;
-    logic [3:0] inReg, outReg;
-    logic [1:0] op;
-    logic [3:0] a, b;
     always_comb begin
         case (op)
           2'b00: inReg =  a + b;
