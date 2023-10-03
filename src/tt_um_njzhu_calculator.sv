@@ -14,8 +14,8 @@ module tt_um_njzhu_calculator (
     logic [1:0] op;
     logic [3:0] a, b;
     assign a = ui_in[3:0];
-    assign ui_in[7:4] = b;
-    assign uio_in[1:0] = op;
+    assign b = ui_in[7:4];
+    assign op = uio_in[1:0];
     assign uio_oe[1:0] = ~8'd3;
     assign uo_out[3:0] = outReg;
     always_comb begin
