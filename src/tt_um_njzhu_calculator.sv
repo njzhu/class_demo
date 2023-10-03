@@ -23,7 +23,7 @@ module tt_um_njzhu_calculator (
           2'b00: inReg =  a + b;
           2'b01: inReg = a - b;
           2'b10: inReg = a | b;
-          2'b11: inReg = (a == b) ? 4'd0 : 4'd1        
+          2'b11: inReg = (a == b) ? 4'd0 : 4'd1;        
         endcase
     end
     Register #(4) r1(.D(inReg), .en(1'b1), .clear(~rst_n), 
