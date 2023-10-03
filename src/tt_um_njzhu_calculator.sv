@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_njzhu_calculator {
+module tt_um_njzhu_calculator (
     input  logic [7:0] ui_in,    // Dedicated inputs - connected to the input switches
     output logic [7:0] uo_out,   // Dedicated outputs - connected to the 7 segment display
     input  logic [7:0] uio_in,   // IOs: Bidirectional Input path
@@ -9,7 +9,7 @@ module tt_um_njzhu_calculator {
     input  logic       ena,      // will go high when the design is enabled
     input  logic       clk,      // clock
     input  logic       rst_n     // reset_n - low to reset
-};
+);
     assign ui_in[3:0] = a;
     assign ui_in[7:4] = b;
     assign uio_in[1:0] = op;
